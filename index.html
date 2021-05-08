@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Marker based AR.js</title>
+  <title>Marker based AR Portfolio</title>
 
   <!-- Import A-Frame and then AR.js -->
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
@@ -20,33 +20,43 @@
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
     <a-assets>
-      <!-- <img id="card1" src="">
-      <img id="card2" src="/2.png">
-      <img id="card3" src="/3.png">
-      <img id="card4" src="/4.png">
-      <img id="card5" src="/5.png">
-      <img id="card6" src="/6.png"> -->
+      <img id="card1" src="./VR-AR-ProjectCards/1.png">
+      <img id="card2" src="./VR-AR-ProjectCards/2.png">
+      <img id="card3" src="./VR-AR-ProjectCards/3.png">
+      <img id="card4" src="./VR-AR-ProjectCards/4.png">
+      <img id="card5" src="./VR-AR-ProjectCards/5.png">
+      <img id="card6" src="./VR-AR-ProjectCards/6.png">
     </a-assets>
 
 
-    <!-- Define a camera which will move according to the marker position -->
-    <a-marker-camera preset="hiro">
+    <!-- Project Virtual Flight -->
+    <a-marker-camera type="pattern" url="./pattern-marker/virtual-flight/pattern-icon-01.patt">
+      <a-plane src="#card1" position="0 0 0" width="1.5" height="1" rotation="-90 0 0"></a-plane>
+    </a-marker-camera>
 
-      <a-box color="blue"></a-box>
+    <!-- Project Virtual Tour -->
+    <a-marker-camera type="pattern" url="./pattern-marker/virtual-tour/pattern-icon-04.patt">
+      <a-plane src="#card2" position="0 0 0" width="1.5" height="1"></a-plane>
+    </a-marker-camera>
 
-      <!-- <a-plane src="#card1" position="0 0 0" width="1.5" height="1" rotation="-90 0 0"></a-plane>
-      <a-plane src="#card2" position="0 0 0" width="1.5" height="1"
-        animation="property:position; to: 0 0 -1.5 ; dur: 2000; delay: 30 ; loop:1" rotation="-90 0 0"></a-plane>
-      <a-plane src="#card3" position="0 0 0" width="1.5" height="1"
-        animation="property:position; to: -2 0 0 ; dur: 2000 ;delay: 30 ; loop:1" rotation="-90 0 0"></a-plane>
-      <a-plane src="#card4" position="0 0 0" width="1.5" height="1"
-        animation="property:position; to: -2 0 -1.5 ; dur: 2000 ;delay: 30 ; loop:1" rotation="-90 0 0"></a-plane>
-      <a-plane src="#card5" position="0 0 0" width="1.5" height="1"
-        animation="property:position; to: 2 0 -1.5 ; dur: 2000 ;delay: 30 ; loop:1" rotation="-90 0 0"></a-plane>
-      <a-plane src="#card6" position="0 0 0" width="1.5" height="1"
-        animation="property:position; to: 2 0 0 ; dur: 2000 ;delay: 30 ; loop:1" rotation="-90 0 0"></a-plane> -->
+    <!-- Project Virtual Shooting Game -->
+    <a-marker-camera type="pattern" url="./pattern-marker/shooting-game/pattern-icon-03.patt">
+      <a-plane src="#card3" position="0 0 0" width="1.5" height="1"></a-plane>
+    </a-marker-camera>
 
+    <!-- Project AR Menu Card -->
+    <a-marker-camera type="pattern" url="./pattern-marker/ar-menu-card/pattern-icon-02.patt">
+      <a-plane src="#card4" position="0 0 0" width="1.5" height="1"></a-plane>
+    </a-marker-camera>
 
+    <!-- Project AR Navigation-->
+    <a-marker-camera type="pattern" url="./pattern-marker/ar-navigation/pattern-icon-03.patt">
+      <a-plane src="#card5" position="0 0 0" width="1.5" height="1"></a-plane>
+    </a-marker-camera>
+
+    <!-- Project AR Face Recoginition-->
+    <a-marker-camera type="pattern" url="./pattern-marker/ar-face-recognition/pattern-icon-06.patt">
+      <a-plane src="#card6" position="0 0 0" width="1.5" height="1"></a-plane>
     </a-marker-camera>
 
   </a-scene>
